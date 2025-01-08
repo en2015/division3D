@@ -106,7 +106,7 @@ const initAnimationMaster = ({ world: w, components: c, entities: e }: ISystem) 
             const projectionMesh = archetype.getColumn(c.mesh)[0];
             // projectionMesh.setEnabled(true);
 
-            startProjectionCube({ world: w, components: c, entities: e }, projectionMesh, charMesh);
+           // startProjectionCube({ world: w, components: c, entities: e }, projectionMesh, charMesh);
 
           },
           loop: false,

@@ -15,7 +15,8 @@ export interface ILandmark {
   contentType: number,
   contentPath: string,
   contentWidth: number,
-  contentHeight: number
+  contentHeight: number,
+  pointOfView: Vector3
 }
 
 export interface IAnimation {
@@ -33,7 +34,7 @@ export interface IAnimation {
 }
 
 export interface ICustomAnimation {
-  property : string,
+  property: string,
   minValue: unknown,
   maxValue: unknown,
   duration: number,
@@ -44,17 +45,17 @@ export interface ICustomAnimation {
 }
 
 export interface ICutScene {
-  entity : number,
-  startFrame : number,
+  entity: number,
+  startFrame: number,
   endFrame: number,
-  animation : unknown,
+  animation: unknown,
   type: number,
   started: boolean
 }
 
 export interface ICutSceneMaster {
   name: string,
-  scenes : Array<ICutScene>,
+  scenes: Array<ICutScene>,
   currentFrame: number,
   maxFrame: number
 }
@@ -82,7 +83,7 @@ export interface IConfig {
   ambientLightIntensity: number,
 
   directionalLightIntensity: number,
-  
+
   toneMappingEnabled: boolean,
   toneMappingType: number,
   exposure: number,
